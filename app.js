@@ -56,6 +56,7 @@
    app.use('/payments', paymentRoutes);
 
    //process.env.PORT, used to be port
-   app.listen(process.env.PORT, () => {
-       console.log(`Server running at http://localhost:${process.env.PORT}`);
-   });
+   const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+    });
